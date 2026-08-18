@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIGITAL JUGAAD | Simple Digital Solutions for Small Businesses</title>
+  <meta name="description" content="Digital Jugaad builds professional, SEO-ready websites, custom Android apps, digital posts, print media design, and Google visibility for small and growing businesses in Pune." />
+  <meta property="og:title" content="DIGITAL JUGAAD | Simple Digital Solutions for Small Businesses" />
+  <meta property="og:description" content="Good Business. Better Digital Presence. We build websites, Android apps, social media creatives, print designs, and Google Maps visibility." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#E25822',
+            dark: '#16171D',
+            cream: '#FAF8F5',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['Bricolage Grotesque', 'system-ui', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAF8F5;
+      color: #16171D;
+    }
+    .font-display {
+      font-family: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF8F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D5CEC4;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #E25822;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF8F5] text-[#16171D] antialiased selection:bg-[#E25822] selection:text-white font-sans pb-16 sm:pb-0">
+
+  <!-- ============================================================ -->
+  <!-- 1. STICKY HEADER / NAVBAR -->
+  <!-- ============================================================ -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#EAE5DD]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-2 group">
+          <div class="flex items-center gap-1.5">
+            <span class="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#16171D]">
+              DIGITAL JUGAAD
+            </span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#E25822]"></span>
+          </div>
+          <span class="hidden xl:inline-block text-[11px] font-mono font-bold tracking-widest text-[#7A7E8F] uppercase pl-2 border-l border-[#D5CEC4]">
+            PUNE
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-[#50525A]">
+          <a href="#what-we-do" class="hover:text-[#16171D] transition-colors">Services</a>
+          <a href="#print-media" class="hover:text-[#16171D] transition-colors">Print Design</a>
+          <a href="#brand-kit-showcase" class="hover:text-[#16171D] transition-colors">Logo & Branding</a>
+          <a href="#website-showcase" class="hover:text-[#16171D] transition-colors">Websites</a>
+          <a href="#social-media-showcase" class="hover:text-[#16171D] transition-colors">Social Media</a>
+          <a href="#about" class="hover:text-[#16171D] transition-colors">About</a>
+          <a href="#faq" class="hover:text-[#16171D] transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Header CTA Buttons -->
+        <div class="flex items-center gap-3">
+          <button 
+            onclick="openWhatsAppModal('Hi Digital Jugaad, I want to discuss a project for my business.')"
+            class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl shadow-xs transition-all transform hover:-translate-y-0.5 cursor-pointer"
+          >
+            <i data-lucide="message-square" class="w-3.5 h-3.5 fill-[#0A2917]"></i>
+            <span class="hidden sm:inline">Instant WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button 
+            id="mobileMenuBtn" 
+            onclick="toggleMobileMenu()" 
+            class="lg:hidden p-2 rounded-xl border border-[#E2DBD1] bg-white text-[#16171D] hover:bg-[#EAE5DD] cursor-pointer"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Drawer -->
+    <div id="mobileDrawer" class="hidden lg:hidden border-b border-[#EAE5DD] bg-white px-4 py-6 space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 text-sm font-bold uppercase tracking-wider text-[#50525A]">
+        <a href="#what-we-do" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">Services</a>
+        <a href="#print-media" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">Print Design</a>
+        <a href="#brand-kit-showcase" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">Logo & Branding</a>
+        <a href="#website-showcase" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">Websites</a>
+        <a href="#social-media-showcase" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">Social Media</a>
+        <a href="#how-it-works" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">How It Works</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="py-2 border-b border-[#F2ECE4] hover:text-[#E25822]">About</a>
+        <a href="#faq" onclick="toggleMobileMenu()" class="py-2 hover:text-[#E25822]">FAQ</a>
+      </nav>
+      <div class="pt-2">
+        <button 
+          onclick="toggleMobileMenu(); openWhatsAppModal('Hi Digital Jugaad, I want to discuss a project for my business.')" 
+          class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-[#0A2917] font-black text-xs uppercase tracking-wider py-3 rounded-xl"
+        >
+          <i data-lucide="message-square" class="w-4 h-4 fill-[#0A2917]"></i>
+          <span>Chat on WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- ============================================================ -->
+    <!-- 2. HERO SECTION -->
+    <!-- ============================================================ -->
+    <section id="home" class="py-16 md:py-24 border-b border-[#EAE5DD] relative overflow-hidden bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Content (7 Cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-[#E25822]"></span>
+              <span>PUNE'S PRACTICAL DIGITAL AGENCY</span>
+            </div>
+
+            <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#16171D] tracking-tight leading-[1.1]">
+              Good Business.<br />
+              <span class="text-[#E25822]">Better Digital Presence.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#50525A] leading-relaxed max-w-2xl">
+              From responsive websites and high-res print media to daily social creatives and local Google visibility — we build everything small businesses need to look sharp.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <button 
+                onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about building a strong digital presence for my business.')"
+                class="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-sm uppercase tracking-wider px-6 py-4 rounded-xl shadow-xs transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <i data-lucide="message-square" class="w-4 h-4 fill-[#0A2917]"></i>
+                <span>Chat on WhatsApp</span>
+              </button>
+
+              <a 
+                href="#what-we-do"
+                class="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#EAE5DD] text-[#16171D] font-bold text-sm uppercase tracking-wider px-6 py-4 rounded-xl border border-[#E2DBD1] transition-colors"
+              >
+                <span>Explore Services</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-[#E25822]"></i>
+              </a>
+            </div>
+
+            <!-- Trust / Specification Chips -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-[#EAE5DD] text-xs font-bold text-[#16171D]">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                <span>Zero Tech Jargon</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                <span>300 DPI CMYK Print</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                <span>Direct Founder Access</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Showcase Frame (5 Cols) -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-3xl border-2 border-[#16171D] p-4 sm:p-6 shadow-xl relative overflow-hidden">
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#EAE5DD]">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#E25822]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#E2DBD1]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#E2DBD1]"></span>
+                </div>
+                <span class="text-[10px] font-mono font-bold text-[#7A7E8F] uppercase">digitaljugaad.in</span>
+              </div>
+
+              <div class="rounded-2xl overflow-hidden border border-[#D5CEC4] relative aspect-16/10 bg-[#16171D] group">
+                <img 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Digital Jugaad - Professional responsive website and mobile presence design"
+                  class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#16171D]/90 via-[#16171D]/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] font-mono text-[#E25822] uppercase tracking-wider font-bold block">
+                    COMPLETE DIGITAL ECOSYSTEM
+                  </span>
+                  <span class="font-display font-bold text-sm sm:text-base">
+                    Website + Social + Print + Local SEO
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. REALITY CHECK / PROBLEM SECTION -->
+    <!-- ============================================================ -->
+    <section id="problem-section" class="py-20 md:py-28 bg-[#16171D] text-white border-b border-[#262934]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#262934] text-[#E25822] text-xs font-bold uppercase tracking-wider mb-4 border border-[#3A3D4D]">
+            <span>THE REAL PROBLEM</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+            Why Most Agencies Fail <span class="text-[#E25822]">Small Businesses.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#A8ABB8]">
+            Local business owners don't need 40-page corporate decks or confusing retainer lock-ins. They need tools that actually generate inquiries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Bad Experience -->
+          <div class="bg-[#1C1E26] p-8 rounded-3xl border border-[#2E3140] space-y-5">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FF5A5F] bg-[#FF5A5F]/10 px-3 py-1 rounded-lg">
+              <i data-lucide="x-circle" class="w-4 h-4"></i>
+              <span>Typical Agency Experience</span>
+            </div>
+            <ul class="space-y-3.5 text-sm text-[#A8ABB8]">
+              <li class="flex items-start gap-3">
+                <i data-lucide="x" class="w-4 h-4 text-[#FF5A5F] shrink-0 mt-0.5"></i>
+                <span>Overpriced monthly packages loaded with vanity metrics you can't measure.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="x" class="w-4 h-4 text-[#FF5A5F] shrink-0 mt-0.5"></i>
+                <span>Over-complicated technical jargon that leaves you guessing what you paid for.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="x" class="w-4 h-4 text-[#FF5A5F] shrink-0 mt-0.5"></i>
+                <span>Slow email chains and zero direct access when you need a simple price update.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Digital Jugaad Way -->
+          <div class="bg-[#1C1E26] p-8 rounded-3xl border-2 border-[#E25822] space-y-5 relative">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#25D366] bg-[#25D366]/10 px-3 py-1 rounded-lg">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              <span>The Digital Jugaad Way</span>
+            </div>
+            <ul class="space-y-3.5 text-sm text-[#FAF8F5]">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-[#25D366] shrink-0 mt-0.5"></i>
+                <span>Fixed, honest quotes with clear deliverables and fast turnarounds.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-[#25D366] shrink-0 mt-0.5"></i>
+                <span>Direct WhatsApp communication with the design and technical team.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-[#25D366] shrink-0 mt-0.5"></i>
+                <span>Press-ready print files and mobile-friendly websites that funnel straight to WhatsApp.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. CORE SERVICES OVERVIEW -->
+    <!-- ============================================================ -->
+    <section id="what-we-do" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <span>OUR SERVICES</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Everything Your Business Needs To <span class="text-[#E25822]">Look Professional Online.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#50525A]">
+            We start with a solid website foundation, then add the visibility and branding your business actually needs.
+          </p>
+        </div>
+
+        <!-- PRIMARY SERVICE HERO CARD -->
+        <div class="bg-white rounded-3xl border-2 border-[#16171D] p-6 sm:p-10 mb-12 shadow-lg relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-6 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="globe" class="w-3.5 h-3.5 text-[#E25822]"></i>
+                <span>PRIMARY FOUNDATION</span>
+              </div>
+
+              <h3 class="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-[#16171D] leading-tight">
+                Custom Business Website
+              </h3>
+
+              <p class="text-sm sm:text-base text-[#50525A] leading-relaxed">
+                A clean, modern website designed to make your business look established, explain your services clearly, and let customers contact you in one tap.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-[#16171D]">
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Mobile First Design</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>WhatsApp Direct Chat</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Google SEO Optimized</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Fast Cloud Hosting</span>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button 
+                  onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about building a custom website for my business.')"
+                  class="inline-flex items-center gap-2 bg-[#16171D] hover:bg-[#2A2C38] text-white font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl cursor-pointer"
+                >
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 text-[#E25822]"></i>
+                  <span>Build My Website</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#D5CEC4] shadow-md bg-[#16171D] relative group">
+              <div class="aspect-16/10 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Professional website development and responsive digital solutions by Digital Jugaad"
+                  class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#16171D]/90 via-[#16171D]/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] font-mono text-[#E25822] uppercase tracking-wider font-bold block">
+                    RESPONSIVE DESIGN
+                  </span>
+                  <span class="font-display font-bold text-sm sm:text-base">
+                    Desktop + Tablet + Mobile Seamless Layout
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6 SECONDARY SERVICES GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1: Android App -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Android App Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">CUSTOM ANDROID</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Android App Design</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Native Android UI, customer portals, booking systems, APK & Play Store ready.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about custom Android app design for my business.')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Android Apps</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Digital Post Design -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" alt="Digital Post Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">SOCIAL CREATIVES</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Digital Post Design</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Daily Instagram/FB posts, WhatsApp status flyers, festive wishes, and launch banners.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about digital post designs and social media creatives.')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Digital Posts</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Print Media Design -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Print Media Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">PRESS READY 300 DPI</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Print Media Design</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Visiting cards, flex banners, rollup standees, brochures, product packaging & menus.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about print media designs (Visiting cards, Banners, Brochures).')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Print Media</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Brand Kit & Logo -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Brand Kit and Logo Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">IDENTITY SYSTEM</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Brand Kit & Logo</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Multi-background logo, typography guide, color palette, and vector master assets.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about a brand kit and logo for my business.')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Brand Kit</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Google & Local SEO -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=600&q=80" alt="Google and Local SEO" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">LOCAL SEARCH PRESENCE</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Google & Local SEO</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Google Business Profile ranking, local keywords, customer review cards & Maps presence.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about Google & SEO visibility for my business.')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Local SEO</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: Digital Marketing -->
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden flex flex-col justify-between shadow-xs hover:border-[#D0C7BC] transition-all">
+            <div class="aspect-16/10 overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=600&q=80" alt="Digital Marketing and Local Ads" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono font-bold text-[#E25822] uppercase tracking-wider">LOCATION TARGETED ADS</span>
+                <h4 class="font-display font-extrabold text-lg text-[#16171D] mt-1">Digital Marketing</h4>
+                <p class="text-xs text-[#50525A] mt-2 leading-relaxed">Location-targeted ads on Meta and Google for high-intent inquiries sent to WhatsApp.</p>
+              </div>
+              <button onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about digital marketing and local ads.')" class="w-full inline-flex items-center justify-center gap-2 bg-[#FAF8F5] hover:bg-[#16171D] text-[#16171D] hover:text-white font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-[#E2DBD1] transition-colors cursor-pointer">
+                <span>Talk About Marketing</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#E25822]"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. INTERACTIVE PRINT MEDIA SHOWCASE (REMOVED POLLUTION IMAGE) -->
+    <!-- ============================================================ -->
+    <section id="print-media" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-3">
+            <i data-lucide="printer" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>PRINT DESIGN</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Print-Ready, <span className="text-[#E25822]">High Resolution.</span>
+          </h2>
+
+          <p class="mt-3 text-base sm:text-lg text-[#50525A]">
+            Business cards, brochures, flyers, and physical branding formatted with calibrated CMYK colors and precise bleed lines for professional printing.
+          </p>
+        </div>
+
+        <!-- Print Category Selector Tabs -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-8">
+          <button id="printTab-cards" onclick="selectPrintTab('cards')" class="print-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-[#16171D] text-white shadow-xs cursor-pointer">
+            Business Cards
+          </button>
+          <button id="printTab-brochures" onclick="selectPrintTab('brochures')" class="print-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-[#50525A] hover:bg-[#EAE5DD] hover:text-[#16171D] border border-[#E2DBD1] cursor-pointer">
+            Brochures & Flyers
+          </button>
+          <button id="printTab-standees" onclick="selectPrintTab('standees')" class="print-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-[#50525A] hover:bg-[#EAE5DD] hover:text-[#16171D] border border-[#E2DBD1] cursor-pointer">
+            Standees & Banners
+          </button>
+          <button id="printTab-packaging" onclick="selectPrintTab('packaging')" class="print-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-white text-[#50525A] hover:bg-[#EAE5DD] hover:text-[#16171D] border border-[#E2DBD1] cursor-pointer">
+            Packaging & Menus
+          </button>
+        </div>
+
+        <!-- Print Media Display Card -->
+        <div class="bg-white rounded-3xl border border-[#E2DBD1] p-6 sm:p-10 shadow-xs">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Image Showcase -->
+            <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-[#D5CEC4] shadow-md bg-[#16171D] relative group">
+              <div class="aspect-4/3 overflow-hidden relative">
+                <img 
+                  id="printImage"
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Luxury Business Cards Design"
+                  class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#16171D]/90 via-[#16171D]/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] font-mono text-[#E25822] uppercase tracking-wider font-bold block">
+                    PRESS-READY CMYK 300 DPI
+                  </span>
+                  <span id="printBadge" class="font-display font-bold text-sm sm:text-base">
+                    3.5" × 2.0" • 350 GSM Cotton Paper
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Details & Specs -->
+            <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+              <div class="space-y-2">
+                <span class="text-xs font-mono font-bold text-[#E25822] uppercase tracking-wider block">
+                  DELIVERABLE SPECIFICATION
+                </span>
+                <h3 id="printTitle" class="font-display font-black text-2xl sm:text-3xl text-[#16171D] leading-tight">
+                  Luxury Visiting Cards
+                </h3>
+                <p id="printCaption" class="text-sm text-[#50525A] leading-relaxed">
+                  Matte laminated, gold foil embossed, and velvet soft-touch business cards crafted for memorable handoffs.
+                </p>
+              </div>
+
+              <!-- 4 Spec Bullets -->
+              <div id="printFeatures" class="space-y-2.5 text-xs font-bold text-[#16171D]">
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Spot UV & Gold Foil Ready</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>QR Code for WhatsApp & Maps</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Double-Sided 300 DPI CMYK</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Precision 3mm Bleed Cut Margins</span>
+                </div>
+              </div>
+
+              <div class="pt-2 space-y-2">
+                <button 
+                  onclick="openWhatsAppModal('Hi Digital Jugaad, I want to get print designs for visiting cards and physical branding.')"
+                  class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl cursor-pointer shadow-xs"
+                >
+                  <i data-lucide="message-square" class="w-3.5 h-3.5 fill-[#0A2917]"></i>
+                  <span>Get Print Files on WhatsApp</span>
+                </button>
+                <p class="text-[11px] text-[#7A7E8F] text-center">
+                  Deliverable Files: Ready-to-Print PDF, Vector AI & EPS
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. INTERACTIVE BRANDING & LOGO SIMULATOR -->
+    <!-- ============================================================ -->
+    <section id="brand-kit-showcase" class="py-16 md:py-24 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-3">
+            <i data-lucide="palette" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>LOGO DESIGN</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Looks Sharp <span className="text-[#E25822]">Everywhere.</span>
+          </h2>
+
+          <p class="mt-3 text-base sm:text-lg text-[#50525A]">
+            One clean, versatile logo formatted for high contrast and legibility across all digital screens, dark modes, stationery, and physical storefronts.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: Interactive Multi-Surface Simulator -->
+          <div class="lg:col-span-7 bg-white rounded-3xl border border-[#E2DBD1] p-6 sm:p-8 shadow-xs space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#EAE5DD]">
+              <div>
+                <span class="text-xs font-mono font-bold text-[#E25822] uppercase tracking-wider block">
+                  INTERACTIVE LOGO SIMULATOR
+                </span>
+                <h3 class="font-display font-black text-xl text-[#16171D]">
+                  Test Contrast Across 4 Surfaces
+                </h3>
+              </div>
+              <span id="surfaceBadge" class="text-xs font-mono font-bold px-2.5 py-1 rounded-md bg-[#FAF8F5] border border-[#EAE5DD] text-[#50525A]">
+                Website & Letterhead
+              </span>
+            </div>
+
+            <!-- Surface Buttons -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button id="surfaceBtn-white" onclick="selectSurface('white')" class="surface-btn p-3 rounded-xl border-2 border-[#16171D] bg-white text-left transition-all cursor-pointer">
+                <span class="block text-xs font-black text-[#16171D]">Clean White</span>
+                <span class="block text-[10px] text-[#7A7E8F]">Light Background</span>
+              </button>
+              <button id="surfaceBtn-charcoal" onclick="selectSurface('charcoal')" class="surface-btn p-3 rounded-xl border border-[#E2DBD1] bg-[#16171D] text-left transition-all cursor-pointer">
+                <span class="block text-xs font-black text-white">Matte Charcoal</span>
+                <span class="block text-[10px] text-[#9FA4B7]">Dark Surface</span>
+              </button>
+              <button id="surfaceBtn-kraft" onclick="selectSurface('kraft')" class="surface-btn p-3 rounded-xl border border-[#E2DBD1] bg-[#C9A882] text-left transition-all cursor-pointer">
+                <span class="block text-xs font-black text-[#24170E]">Kraft Box</span>
+                <span class="block text-[10px] text-[#4A3828]">Packaging</span>
+              </button>
+              <button id="surfaceBtn-gold" onclick="selectSurface('gold')" class="surface-btn p-3 rounded-xl border border-[#E2DBD1] bg-gradient-to-br from-[#1E2028] to-[#0D0E12] text-left transition-all cursor-pointer">
+                <span class="block text-xs font-black text-[#F5E6A3]">Gold Foil</span>
+                <span class="block text-[10px] text-[#C5B358]">Luxury Visiting</span>
+              </button>
+            </div>
+
+            <!-- Live Logo Canvas Preview -->
+            <div id="logoPreviewCanvas" class="aspect-16/10 rounded-2xl border-2 border-[#E2DBD1] bg-white flex flex-col items-center justify-center p-8 transition-all duration-300 relative overflow-hidden shadow-inner">
+              <div class="text-center space-y-3 relative z-10">
+                <div class="flex items-center justify-center gap-2">
+                  <span id="logoText" class="font-display font-black text-3xl sm:text-4xl lg:text-5xl tracking-tight text-[#16171D] transition-colors">
+                    DIGITAL JUGAAD
+                  </span>
+                  <span id="logoDot" class="w-3.5 h-3.5 rounded-full bg-[#E25822] transition-colors"></span>
+                </div>
+                <p id="logoSubtext" class="text-xs uppercase font-mono tracking-widest font-bold text-[#6A6D7C] transition-colors">
+                  Simple Digital Solutions • Pune
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-xs text-[#7A7E8F] pt-2">
+              <span class="flex items-center gap-1.5 font-bold">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366]"></i>
+                High Contrast Guaranteed
+              </span>
+              <span class="font-mono">Vector Master Ready</span>
+            </div>
+          </div>
+
+          <!-- Right: Deliverable Kit & Real Stationery Photo -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white rounded-3xl border border-[#E2DBD1] p-6 sm:p-8 shadow-xs space-y-5">
+              <span class="text-xs font-mono font-bold text-[#E25822] uppercase tracking-wider block">
+                WHAT YOU RECEIVE
+              </span>
+              <h3 class="font-display font-black text-2xl text-[#16171D]">
+                Complete Brand Package
+              </h3>
+              
+              <div class="space-y-3 text-xs font-bold text-[#16171D]">
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center justify-between">
+                  <span>Vector AI & SVG Files</span>
+                  <span class="font-mono text-[#E25822]">Infinite Scale</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center justify-between">
+                  <span>Transparent PNGs (Light & Dark)</span>
+                  <span class="font-mono text-[#E25822]">300 DPI</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center justify-between">
+                  <span>Brand Color Palette (HEX & CMYK)</span>
+                  <span class="font-mono text-[#E25822]">Calibrated</span>
+                </div>
+                <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center justify-between">
+                  <span>WhatsApp & Social Profile Icons</span>
+                  <span class="font-mono text-[#E25822]">Square / Circle</span>
+                </div>
+              </div>
+
+              <!-- Brand Identity Photo -->
+              <div class="rounded-2xl overflow-hidden border border-[#E2DBD1] shadow-xs aspect-16/9 bg-[#16171D]">
+                <img 
+                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Brand identity guidelines, logo application, and printed stationery mockup"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <button 
+                onclick="openWhatsAppModal('Hi Digital Jugaad, I want a complete Logo & Brand Kit system for my business.')"
+                class="w-full inline-flex items-center justify-center gap-2 bg-[#16171D] hover:bg-[#2A2C38] text-white font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-xl cursor-pointer"
+              >
+                <i data-lucide="message-square" class="w-3.5 h-3.5 text-[#E25822]"></i>
+                <span>Get Your Brand Kit on WhatsApp</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. WEBSITE DEVELOPMENT SHOWCASE -->
+    <!-- ============================================================ -->
+    <section id="website-showcase" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="globe" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>WEBSITE SHOWCASE</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Built For Speed. <span className="text-[#E25822]">Engineered For Leads.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#50525A]">
+            A proper business website isn't just pretty colors — it loads in under a second, displays perfectly on budget Android phones, and turns visitors into WhatsApp chats.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-[#E2DBD1] p-6 sm:p-10 shadow-xs">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#D5CEC4] shadow-md bg-[#16171D] relative">
+              <div class="aspect-16/10 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Responsive Web Design by Digital Jugaad"
+                  class="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#16171D]/90 via-[#16171D]/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] font-mono text-[#E25822] uppercase tracking-wider font-bold block">
+                    LIVE CLIENT READY
+                  </span>
+                  <span class="font-display font-bold text-sm sm:text-base">
+                    HTTPS Secured • 98+ Mobile PageSpeed Score
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div class="space-y-2">
+                <span class="text-xs font-mono font-bold text-[#E25822] uppercase tracking-wider block">
+                  TECHNICAL EXCELLENCE
+                </span>
+                <h3 class="font-display font-black text-2xl sm:text-3xl text-[#16171D]">
+                  Everything Handled For You
+                </h3>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-bold text-[#16171D]">
+                <div class="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Custom .in / .com Domain</span>
+                </div>
+                <div class="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Fast Cloud Hosting & SSL</span>
+                </div>
+                <div class="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Floating WhatsApp Chat</span>
+                </div>
+                <div class="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+                  <span>Google Search Console Sync</span>
+                </div>
+              </div>
+
+              <button 
+                onclick="openWhatsAppModal('Hi Digital Jugaad, I want to build a simple, professional website for my business.')"
+                class="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl cursor-pointer"
+              >
+                <i data-lucide="message-square" class="w-3.5 h-3.5 fill-[#0A2917]"></i>
+                <span>Get a Website Quote on WhatsApp</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. SOCIAL MEDIA CREATIVES & GRID -->
+    <!-- ============================================================ -->
+    <section id="social-media-showcase" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="image" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>SOCIAL MEDIA DESIGN</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Consistent Creatives That <span className="text-[#E25822]">Stop The Scroll.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#50525A]">
+            Keep your Instagram, Facebook, and WhatsApp Status looking fresh with branded service flyers, seasonal offers, and educational carousels.
+          </p>
+        </div>
+
+        <!-- 6-Post Visual Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+          
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1542744094-3a31727221ec?auto=format&fit=crop&w=400&q=80" alt="Service Spotlight Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">SERVICES</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">Premium Quality</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=400&q=80" alt="Seasonal Promotion Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">PROMOTION</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">20% Festive Offer</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&q=80" alt="Educational Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">TIPS & VALUE</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">3 Customer Tips</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1581291518655-9523c932edcf?auto=format&fit=crop&w=400&q=80" alt="Work Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">PORTFOLIO</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">Project Proof</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=400&q=80" alt="Brand Story" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">STORY</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">Pune Roots</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden group shadow-2xs">
+            <div class="aspect-square overflow-hidden bg-[#16171D]">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" alt="Updates Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-3">
+              <span class="text-[9px] font-mono font-bold text-[#E25822] uppercase">UPDATES</span>
+              <p class="text-xs font-extrabold text-[#16171D] truncate">New Branch Open</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <button 
+            onclick="openWhatsAppModal('Hi Digital Jugaad, I want professional social media digital post designs & festive creatives.')"
+            class="inline-flex items-center gap-2 bg-[#16171D] hover:bg-[#2A2C38] text-white font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl cursor-pointer"
+          >
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>Get Monthly Social Media Package</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 9. GOOGLE & LOCAL SEO -->
+    <!-- ============================================================ -->
+    <section id="seo" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="search" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>ONLINE VISIBILITY & LOCAL SEO</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Help Customers Find You <span className="text-[#E25822]">On Google & Maps.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#50525A]">
+            When nearby customers in Pune search for what you offer, your business should show up with accurate information, verified reviews, and a fast link to your website.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-[#E2DBD1] p-6 sm:p-10 shadow-xs">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#D5CEC4] shadow-md bg-[#16171D] relative">
+              <div class="aspect-16/10 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Google Maps and local SEO search visibility optimization"
+                  class="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#16171D]/90 via-[#16171D]/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] font-mono text-[#E25822] uppercase tracking-wider font-bold block">
+                    LOCAL GOOGLE PRESENCE
+                  </span>
+                  <span class="font-display font-bold text-sm sm:text-base">
+                    Google Business Profile + Maps Navigation Sync
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+              <div class="space-y-3 text-xs font-bold text-[#16171D]">
+                <div class="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-start gap-3">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-[#E25822] shrink-0 mt-0.5"></i>
+                  <div>
+                    <span class="block font-black text-sm">Google Maps Verification</span>
+                    <span class="text-[#50525A] font-normal">Accurate store timing, phone number, and directions.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-start gap-3">
+                  <i data-lucide="star" class="w-4 h-4 text-[#E25822] shrink-0 mt-0.5"></i>
+                  <div>
+                    <span class="block font-black text-sm">Review Card Setup</span>
+                    <span class="text-[#50525A] font-normal">QR code standees for your counter so happy customers leave 5-star ratings.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-start gap-3">
+                  <i data-lucide="search" class="w-4 h-4 text-[#E25822] shrink-0 mt-0.5"></i>
+                  <div>
+                    <span class="block font-black text-sm">Local Keyword Ranking</span>
+                    <span class="text-[#50525A] font-normal">Targeted service pages optimized for customers searching in your specific locality.</span>
+                  </div>
+                </div>
+              </div>
+
+              <button 
+                onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about optimizing my website for Google & local search.')"
+                class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl cursor-pointer"
+              >
+                <i data-lucide="message-square" class="w-3.5 h-3.5 fill-[#0A2917]"></i>
+                <span>Get Found on Google Maps</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 10. SIMPLE 6-STEP PROCESS -->
+    <!-- ============================================================ -->
+    <section id="how-it-works" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <span>SIMPLE PROCESS</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            You Tell Us. <span className="text-[#E25822]">We Build It.</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#50525A]">
+            A clear, straightforward 6-step roadmap with zero technical headaches for you.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">01</span>
+              <i data-lucide="message-square" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">Tell Us About Your Business</h3>
+            <p class="text-sm text-[#50525A]">Send us your business details, photos, services and contact information.</p>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">02</span>
+              <i data-lucide="layout" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">We Plan Your Structure</h3>
+            <p class="text-sm text-[#50525A]">We organize the information into a simple structure your customers can understand.</p>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">03</span>
+              <i data-lucide="code-2" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">We Design & Build</h3>
+            <p class="text-sm text-[#50525A]">We create the website, optimize it for mobile and calibrate high-res visuals.</p>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">04</span>
+              <i data-lucide="check-check" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">You Review & Approve</h3>
+            <p class="text-sm text-[#50525A]">You check the draft and tell us any text or photo adjustments you want.</p>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">05</span>
+              <i data-lucide="rocket" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">We Go Live</h3>
+            <p class="text-sm text-[#50525A]">Domain, SSL cloud hosting, and search engine registrations go live.</p>
+          </div>
+
+          <div class="bg-white p-7 rounded-2xl border border-[#E2DBD1] hover:border-[#D0C7BC] transition-all shadow-xs">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#F2ECE4]">
+              <span class="font-mono text-sm font-black px-2.5 py-1 rounded-md bg-[#16171D] text-white">06</span>
+              <i data-lucide="trending-up" class="w-4 h-4 text-[#E25822]"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-lg text-[#16171D] mb-2">Grow Online</h3>
+            <p class="text-sm text-[#50525A]">Continue with monthly SEO updates, digital post designs, and targeted ads.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 11. ABOUT DIGITAL JUGAAD -->
+    <!-- ============================================================ -->
+    <section id="about" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider">
+              <span>ABOUT DIGITAL JUGAAD</span>
+            </div>
+
+            <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+              Practical Digital Solutions, <span className="text-[#E25822]">Rooted In Pune.</span>
+            </h2>
+
+            <div class="space-y-4 text-base text-[#50525A] leading-relaxed">
+              <p>
+                In India, <strong class="text-[#16171D]">"Jugaad"</strong> means smart, efficient, and practical problem-solving. At Digital Jugaad, we bring that same philosophy to digital services for local businesses.
+              </p>
+              <p>
+                We noticed countless shop owners, doctors, consultants, and manufacturers in Pune getting frustrated by overpriced agencies speaking complicated English buzzwords without delivering tangible results.
+              </p>
+              <p>
+                We do things differently: clear pricing, fast delivery, press-ready print files, and websites that direct interested customers straight to WhatsApp.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-[#EAE5DD]">
+              <div>
+                <span class="font-display font-black text-2xl text-[#16171D]">100%</span>
+                <span class="block text-xs text-[#7A7E8F]">Transparent Pricing</span>
+              </div>
+              <div>
+                <span class="font-display font-black text-2xl text-[#E25822]">Direct</span>
+                <span class="block text-xs text-[#7A7E8F]">WhatsApp Access</span>
+              </div>
+              <div>
+                <span class="font-display font-black text-2xl text-[#16171D]">Pune</span>
+                <span class="block text-xs text-[#7A7E8F]">Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 rounded-3xl overflow-hidden border-2 border-[#16171D] bg-[#16171D] p-3 shadow-xl">
+            <div class="aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                alt="Digital Jugaad Team in Pune"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 12. FAQ ACCORDION -->
+    <!-- ============================================================ -->
+    <section id="faq" class="py-20 md:py-28 bg-[#FAF8F5] border-b border-[#EAE5DD]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#16171D] text-[#FAF8F5] text-xs font-bold uppercase tracking-wider mb-4">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-[#E25822]"></i>
+            <span>FREQUENTLY ASKED QUESTIONS</span>
+          </div>
+
+          <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#16171D] tracking-tight leading-tight">
+            Clear Answers. <span className="text-[#E25822]">Zero Jargon.</span>
+          </h2>
+          <p class="mt-4 text-base text-[#50525A]">
+            Common questions business owners ask before building their website with us.
+          </p>
+        </div>
+
+        <div class="space-y-3.5">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-card bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden transition-all shadow-2xs">
+            <button onclick="toggleFaq(0)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+              <span class="font-display font-extrabold text-base sm:text-lg text-[#16171D]">Do I need a website if I already have Instagram?</span>
+              <div class="faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#16171D] text-white">
+                <i data-lucide="minus" class="w-4 h-4"></i>
+              </div>
+            </button>
+            <div class="faq-answer px-6 pb-6 pt-1 text-sm text-[#50525A] leading-relaxed border-t border-[#F2ECE4]">
+              Yes. While Instagram is great for updates, many potential customers search on Google first. An Instagram profile also doesn’t let customers easily view full pricing, organize service menus, read structured verified reviews, or find your exact location without logging into an app. A website is your business’s own online home that you control completely.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-card bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden transition-all shadow-2xs">
+            <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+              <span class="font-display font-extrabold text-base sm:text-lg text-[#16171D]">I already have a Google Business Profile. Do I still need a website?</span>
+              <div class="faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </div>
+            </button>
+            <div class="faq-answer hidden px-6 pb-6 pt-1 text-sm text-[#50525A] leading-relaxed border-t border-[#F2ECE4]">
+              A Google Business Profile tells people that your business exists, but a website tells them why they should choose you. Linking a professional, fast-loading website to your Google profile significantly boosts customer trust, provides complete service details, and increases high-intent calls and WhatsApp enquiries.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-card bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden transition-all shadow-2xs">
+            <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+              <span class="font-display font-extrabold text-base sm:text-lg text-[#16171D]">Will my website work on budget mobile phones?</span>
+              <div class="faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </div>
+            </button>
+            <div class="faq-answer hidden px-6 pb-6 pt-1 text-sm text-[#50525A] leading-relaxed border-t border-[#F2ECE4]">
+              Absolutely. We design mobile-first because over 85% of local Indian customers browse on their smartphones. Every page loads fast, text is easy to read without zooming, and WhatsApp or Call buttons are reachable with one thumb tap.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-card bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden transition-all shadow-2xs">
+            <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+              <span class="font-display font-extrabold text-base sm:text-lg text-[#16171D]">Can you arrange the domain and cloud hosting?</span>
+              <div class="faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </div>
+            </button>
+            <div class="faq-answer hidden px-6 pb-6 pt-1 text-sm text-[#50525A] leading-relaxed border-t border-[#F2ECE4]">
+              Yes. We help you choose and set up your domain (.in, .com, etc.) and fast, reliable cloud hosting with SSL security included so you do not have to deal with technical setup.
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-card bg-white rounded-2xl border border-[#E2DBD1] overflow-hidden transition-all shadow-2xs">
+            <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 cursor-pointer">
+              <span class="font-display font-extrabold text-base sm:text-lg text-[#16171D]">Can I message you anytime on WhatsApp?</span>
+              <div class="faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]">
+                <i data-lucide="plus" class="w-4 h-4"></i>
+              </div>
+            </button>
+            <div class="faq-answer hidden px-6 pb-6 pt-1 text-sm text-[#50525A] leading-relaxed border-t border-[#F2ECE4]">
+              Yes! WhatsApp is our primary communication channel. You can message us anytime with your business details, photos, or questions.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 13. FINAL CTA SECTION -->
+    <!-- ============================================================ -->
+    <section id="contact" class="py-20 md:py-28 bg-[#16171D] text-[#FAF8F5] relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[#E25822]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#25D366]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#252834] text-[#E25822] text-xs font-black uppercase tracking-wider mb-6 border border-[#373B4D]">
+          <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+          <span>GET STARTED TODAY</span>
+        </div>
+
+        <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight max-w-2xl mx-auto mb-6">
+          Ready To Take Your Business Online?
+        </h2>
+
+        <div class="space-y-1 text-base sm:text-lg text-[#B8BAC8] max-w-xl mx-auto mb-8 leading-relaxed">
+          <p class="font-bold text-white">Tell us about your business.</p>
+          <p>We'll tell you what you actually need.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+          <button 
+            onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about building a website and digital presence for my business.')"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer"
+          >
+            <i data-lucide="message-square" class="w-4 h-4 fill-[#0A2917]"></i>
+            <span>Chat on WhatsApp</span>
+          </button>
+
+          <a 
+            href="tel:+918421399663"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#252834] hover:bg-[#2F3342] text-white border border-[#3C4052] font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-colors"
+          >
+            <i data-lucide="phone" class="w-4 h-4 text-[#A8ABB8]"></i>
+            <span>+91 84213 99663</span>
+          </a>
+        </div>
+
+        <p class="mt-6 text-xs text-[#8A8E9F]">
+          No complicated forms. Just tell us about your business.
+        </p>
+
+        <div class="mt-8 pt-8 border-t border-[#262936] inline-flex items-center gap-2 text-xs text-[#8A8E9F]">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#E25822]"></i>
+          <span>Based in Pune • Serving businesses all over India</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- 14. FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="bg-[#121316] text-[#FAF8F5] border-t border-[#262934] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#262936]">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-1.5">
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white">
+              DIGITAL JUGAAD
+            </span>
+            <span class="w-2 h-2 rounded-full bg-[#E25822]"></span>
+          </div>
+
+          <p class="text-xs uppercase tracking-widest text-[#E25822] font-bold">
+            Simple Digital Solutions for Small Businesses
+          </p>
+
+          <p class="text-sm text-[#A8ABB8] max-w-sm leading-relaxed">
+            We help local and growing businesses in Pune and beyond build clean, professional websites and digital solutions.
+          </p>
+
+          <div class="pt-2">
+            <button 
+              onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about a project for my business.')"
+              class="inline-flex items-center gap-2 text-xs font-bold text-[#25D366] bg-[#25D366]/10 hover:bg-[#25D366]/20 px-3.5 py-2 rounded-lg border border-[#25D366]/30 transition-colors cursor-pointer"
+            >
+              <i data-lucide="message-square" class="w-3.5 h-3.5 fill-[#25D366]"></i>
+              <span>WhatsApp Digital Jugaad</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white">
+            Services
+          </h4>
+          <ul class="space-y-2 text-xs text-[#9A9DAE]">
+            <li><a href="#what-we-do" class="hover:text-white transition-colors">Business Websites</a></li>
+            <li><a href="#print-media" class="hover:text-white transition-colors">Print Media (Cards & Standees)</a></li>
+            <li><a href="#brand-kit-showcase" class="hover:text-white transition-colors">Logo & Brand Kit</a></li>
+            <li><a href="#social-media-showcase" class="hover:text-white transition-colors">Digital Posts & Social Creatives</a></li>
+            <li><a href="#seo" class="hover:text-white transition-colors">Google Maps & SEO</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white">
+            Pune Office & Contact
+          </h4>
+          <p class="text-xs text-[#9A9DAE] leading-relaxed">
+            Pune, Maharashtra • 411001<br />
+            Direct Call: +91 84213 99663<br />
+            Email: hello@digitaljugaad.in
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7A7E8F]">
+        <p>© 2026 DIGITAL JUGAAD. All rights reserved.</p>
+        <p class="font-mono text-[11px]">Crafted with care in Pune, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- 15. FLOATING WHATSAPP BUTTON (DESKTOP & TABLET) -->
+  <!-- ============================================================ -->
+  <div class="fixed bottom-6 right-6 z-40 hidden sm:block">
+    <button 
+      onclick="openWhatsAppModal('Hi Digital Jugaad, I want to talk about a project for my business.')"
+      class="group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-black text-xs uppercase tracking-wider px-4 py-3.5 rounded-full shadow-2xl transition-all transform hover:scale-105 cursor-pointer border-2 border-white"
+    >
+      <i data-lucide="message-square" class="w-5 h-5 fill-[#0A2917]"></i>
+      <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300">
+        Chat on WhatsApp
+      </span>
+    </button>
+  </div>
+
+  <!-- Mobile Bottom Sticky Action Bar -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#E2DBD1] p-2.5 flex items-center gap-2 shadow-2xl">
+    <button 
+      onclick="openWhatsAppModal('Hi Digital Jugaad, I want to discuss a project for my business.')"
+      class="flex-1 bg-[#25D366] text-[#0A2917] font-black text-xs uppercase tracking-wider py-3 rounded-xl flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+    >
+      <i data-lucide="message-square" class="w-4 h-4 fill-[#0A2917]"></i>
+      <span>WhatsApp Us</span>
+    </button>
+    <a 
+      href="tel:+918421399663"
+      class="p-3 bg-[#16171D] text-white rounded-xl flex items-center justify-center cursor-pointer"
+      aria-label="Call Digital Jugaad"
+    >
+      <i data-lucide="phone" class="w-4 h-4"></i>
+    </a>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 16. WHATSAPP INQUIRY MODAL -->
+  <!-- ============================================================ -->
+  <div id="whatsappModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl border border-[#E2DBD1] max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-5 relative animate-in fade-in zoom-in duration-200">
+      
+      <button onclick="closeWhatsAppModal()" class="absolute top-5 right-5 p-2 rounded-xl text-[#7A7E8F] hover:text-[#16171D] hover:bg-[#FAF8F5] cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366]">
+          <i data-lucide="message-square" class="w-6 h-6 fill-[#25D366]"></i>
+        </div>
+        <div>
+          <h3 class="font-display font-black text-xl text-[#16171D]">Chat on WhatsApp</h3>
+          <p class="text-xs text-[#50525A]">Direct founder reply • Zero automated bots</p>
+        </div>
+      </div>
+
+      <!-- Quick Preset Selection -->
+      <div class="space-y-2">
+        <label class="text-[11px] font-mono font-bold text-[#7A7E8F] uppercase">Pick a Quick Topic</label>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <button onclick="setModalMessage('Hi Digital Jugaad, I want to build a simple, professional website for my business.')" class="p-2.5 rounded-xl border border-[#E2DBD1] text-left hover:border-[#16171D] hover:bg-[#FAF8F5] font-bold text-[#16171D] transition-colors cursor-pointer truncate">
+            Website Enquiry
+          </button>
+          <button onclick="setModalMessage('Hi Digital Jugaad, I need print media designs (Visiting cards, Banners, Brochures & Menus).')" class="p-2.5 rounded-xl border border-[#E2DBD1] text-left hover:border-[#16171D] hover:bg-[#FAF8F5] font-bold text-[#16171D] transition-colors cursor-pointer truncate">
+            Print Design
+          </button>
+          <button onclick="setModalMessage('Hi Digital Jugaad, I want a complete Logo & Brand Kit system for my business.')" class="p-2.5 rounded-xl border border-[#E2DBD1] text-left hover:border-[#16171D] hover:bg-[#FAF8F5] font-bold text-[#16171D] transition-colors cursor-pointer truncate">
+            Logo & Brand Kit
+          </button>
+          <button onclick="setModalMessage('Hi Digital Jugaad, I want to help customers find my business on Google and Maps.')" class="p-2.5 rounded-xl border border-[#E2DBD1] text-left hover:border-[#16171D] hover:bg-[#FAF8F5] font-bold text-[#16171D] transition-colors cursor-pointer truncate">
+            Google Maps SEO
+          </button>
+        </div>
+      </div>
+
+      <!-- Message Text Area -->
+      <div class="space-y-2">
+        <label class="text-[11px] font-mono font-bold text-[#7A7E8F] uppercase">Your Message</label>
+        <textarea 
+          id="customWhatsAppText" 
+          rows="3" 
+          class="w-full p-3.5 rounded-xl border border-[#E2DBD1] bg-[#FAF8F5] text-sm text-[#16171D] focus:bg-white focus:outline-[#16171D]"
+        ></textarea>
+      </div>
+
+      <!-- Action Button -->
+      <button 
+        onclick="sendWhatsAppDirect()"
+        class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-black text-sm uppercase tracking-wider py-4 rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
+      >
+        <i data-lucide="send" class="w-4 h-4"></i>
+        <span>Open in WhatsApp</span>
+      </button>
+
+      <p class="text-[11px] text-center text-[#7A7E8F]">
+        Opens WhatsApp directly with +91 84213 99663
+      </p>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 17. VANILLA JAVASCRIPT LOGIC -->
+  <!-- ============================================================ -->
+  <script>
+    // Initialize Lucide Icons
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Mobile Navigation Drawer Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // Print Media Showcase Data & Interactive Tab Switcher
+    const PRINT_DATA = {
+      cards: {
+        title: 'Luxury Visiting Cards',
+        badge: '3.5" × 2.0" • 350 GSM Cotton Paper',
+        caption: 'Matte laminated, gold foil embossed, and velvet soft-touch business cards crafted for memorable handoffs.',
+        image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1000&q=80',
+        features: [
+          'Spot UV & Gold Foil Ready',
+          'QR Code for WhatsApp & Maps',
+          'Double-Sided 300 DPI CMYK',
+          'Precision 3mm Bleed Cut Margins'
+        ]
+      },
+      brochures: {
+        title: 'Tri-Fold Brochures & Marketing Flyers',
+        badge: 'A4 / A5 / Tri-Fold 6-Panel Layout',
+        caption: 'Clean, structured product portfolios and promotional flyers designed to clearly communicate your services.',
+        image: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1000&q=80',
+        features: [
+          'Crisp High-Res Typography',
+          'Product Pricing Tables',
+          'Accurate Fold Line Scoring',
+          'Press-Ready Vector AI & PDF'
+        ]
+      },
+      standees: {
+        title: 'Rollup Standees & Shopfront Flex',
+        badge: '6ft × 2.5ft Standee & Custom Flex',
+        caption: 'High-impact outdoor banners and exhibition standees engineered for maximum legibility from a distance.',
+        image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80',
+        features: [
+          'Bold High-Contrast Lettering',
+          'Color-Calibrated for Outdoor UV',
+          'Scaled to Exact Press Size',
+          'Direct Press Handover File'
+        ]
+      },
+      packaging: {
+        title: 'Product Packaging, Labels & Menus',
+        badge: 'Pantone Calibrated • Custom Die-Lines',
+        caption: 'Laminated restaurant menus, bottle labels, and branded packaging boxes ready for die-cut printing.',
+        image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1000&q=80',
+        features: [
+          'Tamper-Proof Sticker Labels',
+          'Food & Cafe Laminated Menus',
+          'Barcode & Legal Label Spacing',
+          'Rich CMYK True-Color Profile'
+        ]
+      }
+    };
+
+    function selectPrintTab(tabKey) {
+      const data = PRINT_DATA[tabKey];
+      if (!data) return;
+
+      // Update Active Tab Styles
+      document.querySelectorAll('.print-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-[#16171D]', 'text-white', 'shadow-xs');
+        btn.classList.add('bg-white', 'text-[#50525A]', 'border', 'border-[#E2DBD1]');
+      });
+      const activeBtn = document.getElementById('printTab-' + tabKey);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white', 'text-[#50525A]', 'border', 'border-[#E2DBD1]');
+        activeBtn.classList.add('bg-[#16171D]', 'text-white', 'shadow-xs');
+      }
+
+      // Update Content
+      document.getElementById('printTitle').textContent = data.title;
+      document.getElementById('printBadge').textContent = data.badge;
+      document.getElementById('printCaption').textContent = data.caption;
+      document.getElementById('printImage').src = data.image;
+
+      // Update Features List
+      const featuresContainer = document.getElementById('printFeatures');
+      featuresContainer.innerHTML = data.features.map(feat => `
+        <div class="p-3 bg-[#FAF8F5] rounded-xl border border-[#EAE5DD] flex items-center gap-2.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-[#25D366] shrink-0"></i>
+          <span>${feat}</span>
+        </div>
+      `).join('');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // Logo Simulator Surface Switcher
+    const SURFACES = {
+      white: {
+        badge: 'Website & Letterhead',
+        canvasClass: 'bg-white border-[#E2DBD1]',
+        textColor: '#16171D',
+        subColor: '#6A6D7C',
+        dotColor: '#E25822'
+      },
+      charcoal: {
+        badge: 'Dark Mode & Acrylic Signs',
+        canvasClass: 'bg-[#16171D] border-[#2A2C38]',
+        textColor: '#FFFFFF',
+        subColor: '#9FA4B7',
+        dotColor: '#E25822'
+      },
+      kraft: {
+        badge: 'Packaging & Cartons',
+        canvasClass: 'bg-[#C9A882] border-[#B8966F]',
+        textColor: '#24170E',
+        subColor: '#4A3828',
+        dotColor: '#16171D'
+      },
+      gold: {
+        badge: 'Luxury Visiting Cards',
+        canvasClass: 'bg-gradient-to-br from-[#1E2028] to-[#0D0E12] border-[#D4AF37]/50',
+        textColor: '#F5E6A3',
+        subColor: '#C5B358',
+        dotColor: '#D4AF37'
+      }
+    };
+
+    function selectSurface(surfaceKey) {
+      const s = SURFACES[surfaceKey];
+      if (!s) return;
+
+      document.getElementById('surfaceBadge').textContent = s.badge;
+      
+      const canvas = document.getElementById('logoPreviewCanvas');
+      canvas.className = `aspect-16/10 rounded-2xl border-2 p-8 flex flex-col items-center justify-center transition-all duration-300 relative overflow-hidden shadow-inner ${s.canvasClass}`;
+
+      document.getElementById('logoText').style.color = s.textColor;
+      document.getElementById('logoSubtext').style.color = s.subColor;
+      document.getElementById('logoDot').style.backgroundColor = s.dotColor;
+
+      // Update button active border states
+      document.querySelectorAll('.surface-btn').forEach(btn => {
+        btn.classList.remove('border-2', 'border-[#16171D]');
+        btn.classList.add('border', 'border-[#E2DBD1]');
+      });
+      const activeBtn = document.getElementById('surfaceBtn-' + surfaceKey);
+      if (activeBtn) {
+        activeBtn.classList.remove('border', 'border-[#E2DBD1]');
+        activeBtn.classList.add('border-2', 'border-[#16171D]');
+      }
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(index) {
+      const cards = document.querySelectorAll('.faq-card');
+      cards.forEach((card, idx) => {
+        const answer = card.querySelector('.faq-answer');
+        const iconBox = card.querySelector('.faq-icon-box');
+        if (idx === index) {
+          const isCurrentlyHidden = answer.classList.contains('hidden');
+          if (isCurrentlyHidden) {
+            answer.classList.remove('hidden');
+            iconBox.className = 'faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#16171D] text-white';
+            iconBox.innerHTML = '<i data-lucide="minus" class="w-4 h-4"></i>';
+          } else {
+            answer.classList.add('hidden');
+            iconBox.className = 'faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]';
+            iconBox.innerHTML = '<i data-lucide="plus" class="w-4 h-4"></i>';
+          }
+        } else {
+          answer.classList.add('hidden');
+          iconBox.className = 'faq-icon-box w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#FAF8F5] text-[#50525A] border border-[#EAE5DD]';
+          iconBox.innerHTML = '<i data-lucide="plus" class="w-4 h-4"></i>';
+        }
+      });
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    // WhatsApp Modal Functions
+    const WHATSAPP_PHONE = '918421399663';
+
+    function openWhatsAppModal(defaultMsg) {
+      const modal = document.getElementById('whatsappModal');
+      const textarea = document.getElementById('customWhatsAppText');
+      textarea.value = defaultMsg || 'Hi Digital Jugaad, I want to discuss a project for my business.';
+      modal.classList.remove('hidden');
+    }
+
+    function closeWhatsAppModal() {
+      document.getElementById('whatsappModal').classList.add('hidden');
+    }
+
+    function setModalMessage(msg) {
+      document.getElementById('customWhatsAppText').value = msg;
+    }
+
+    function sendWhatsAppDirect() {
+      const text = document.getElementById('customWhatsAppText').value.trim();
+      const encoded = encodeURIComponent(text || 'Hi Digital Jugaad, I want to talk about digital solutions for my business.');
+      const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
+      window.open(url, '_blank');
+      closeWhatsAppModal();
+    }
+
+    // Close modal on escape key or clicking backdrop
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeWhatsAppModal();
+      }
+    });
+    document.getElementById('whatsappModal')?.addEventListener('click', (e) => {
+      if (e.target === document.getElementById('whatsappModal')) {
+        closeWhatsAppModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

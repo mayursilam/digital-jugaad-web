@@ -1,0 +1,6 @@
+{
+  "name": "Digital Jugaad",
+  "description": "Simple Digital Solutions for Small Businesses. Websites, Android App Design, Digital Posts, Print Media, SEO & Branding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
