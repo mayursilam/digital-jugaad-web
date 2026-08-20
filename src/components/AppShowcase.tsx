@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, CheckCircle2, MessageSquare, ArrowRight, Star, Download, ShieldCheck, Zap, Play, Layers } from 'lucide-react';
+import androidAppImg from '../assets/images/regenerated_image_1787237618175.jpg';
 
 interface AppShowcaseProps {
   onOpenWhatsApp: (msg?: string) => void;
@@ -35,7 +36,7 @@ export const AppShowcase: React.FC<AppShowcaseProps> = ({ onOpenWhatsApp }) => {
             <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-[#D5CEC4] shadow-md bg-[#16171D] relative">
               <div className="aspect-16/10 overflow-hidden relative">
                 <img
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80"
+                  src={androidAppImg}
                   alt="Custom Android App Design and Development by Digital Jugaad"
                   className="w-full h-full object-cover object-center"
                   referrerPolicy="no-referrer"

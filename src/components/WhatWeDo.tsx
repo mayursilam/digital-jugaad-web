@@ -12,11 +12,12 @@ import {
   MessageSquare,
   Sparkles
 } from 'lucide-react';
+import androidAppImg from '../assets/images/regenerated_image_1787237618175.jpg';
+import socialMediaImg from '../assets/images/regenerated_image_1787237614527.png';
+import printMediaImg from '../assets/images/regenerated_image_1787237608489.png';
 import brandKitImg from '../assets/images/regenerated_image_1787049428575.png';
-import socialMediaImg from '../assets/images/regenerated_image_1787049432640.png';
-import printMediaImg from '../assets/images/regenerated_image_1787051148630.png';
-import seoImg from '../assets/images/regenerated_image_1787051153872.png';
-import digitalMarketingImg from '../assets/images/regenerated_image_1787051158118.png';
+import seoImg from '../assets/images/regenerated_image_1787238335187.jpg';
+import digitalMarketingImg from '../assets/images/regenerated_image_1787237612947.jpg';
 
 interface WhatWeDoProps {
   onOpenWhatsApp: (message?: string) => void;
@@ -29,7 +30,7 @@ export const WhatWeDo: React.FC<WhatWeDoProps> = ({ onOpenWhatsApp }) => {
       title: 'ANDROID APP DESIGN',
       tagline: 'Custom Android Apps for your growing business.',
       details: 'Native Android UI, customer portals, booking systems, APK & Play Store ready.',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80',
+      image: androidAppImg,
       cta: 'Talk About Android Apps',
       msg: 'Hi Digital Jugaad, I want to talk about custom Android app design for my business.',
     },

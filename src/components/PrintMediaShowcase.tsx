@@ -9,7 +9,7 @@ import {
   Store, 
   Package 
 } from 'lucide-react';
-import printMediaImg from '../assets/images/regenerated_image_1787051148630.png';
+import printMediaImg from '../assets/images/regenerated_image_1787237608489.png';
 
 interface PrintMediaShowcaseProps {
   onOpenWhatsApp: (msg?: string) => void;

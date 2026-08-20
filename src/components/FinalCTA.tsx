@@ -30,11 +30,11 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenWhatsApp, onOpenCall }
         </div>
 
         {/* Primary and Secondary CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mx-auto">
           <button
             id="final-whatsapp-btn"
             onClick={onOpenWhatsApp}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer"
+            className="w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-[#0A2917] font-extrabold text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
           >
             <MessageSquare className="w-4 h-4 fill-[#0A2917]" />
             <span>Chat on WhatsApp</span>
@@ -43,7 +43,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenWhatsApp, onOpenCall }
           <button
             id="final-call-btn"
             onClick={onOpenCall}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#252834] hover:bg-[#2F3342] text-white border border-[#3C4052] font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-colors cursor-pointer"
+            className="w-auto inline-flex items-center justify-center gap-2 bg-[#252834] hover:bg-[#2F3342] text-white border border-[#3C4052] font-bold text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl transition-colors cursor-pointer whitespace-nowrap"
           >
             <Phone className="w-4 h-4 text-[#A8ABB8]" />
             <span>Call Us</span>

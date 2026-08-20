@@ -10,7 +10,7 @@ import {
   TrendingUp,
   Share2
 } from 'lucide-react';
-import seoImg from '../assets/images/regenerated_image_1787051153872.png';
+import seoImg from '../assets/images/regenerated_image_1787238335187.jpg';
 
 interface SEOSectionProps {
   onOpenWhatsApp: () => void;

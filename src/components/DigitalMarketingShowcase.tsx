@@ -1,6 +1,6 @@
 import React from 'react';
 import { Megaphone, Target, Users, TrendingUp, MessageSquare, ArrowRight, CheckCircle2 } from 'lucide-react';
-import digitalMarketingImg from '../assets/images/regenerated_image_1787051158118.png';
+import digitalMarketingImg from '../assets/images/regenerated_image_1787237612947.jpg';
 
 interface DigitalMarketingShowcaseProps {
   onOpenWhatsApp: (msg?: string) => void;
